@@ -3,7 +3,7 @@ FROM ubuntu:latest
 
 # Identify the maintainer of an image
 LABEL version="1.0.0"
-LABEL maintainer="anshulc55@gmail.com"
+LABEL maintainer="divya.divs09@gmail.com"
 
 # Update the image to the latest packages
 RUN apt-get update
