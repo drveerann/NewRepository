@@ -1,5 +1,5 @@
 # from which base image you want to start building your custom image
-FROM alpine:latest
+FROM ubuntu:latest
 
 # label information for your image - identify the maintainer of the image
 LABEL version="4.0.0"
