@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: divya-pod1
+  name: divya-pod2-yaml
   labels:
-    run: divya-pod1
+    run: divya-pod2-yaml
 spec:
   containers:
-  - name: demo-container-divya-pod1
+  - name: demo-container-divs-pod2
     image: dveerannagari/divsown-image:2.0.0
     command: ["printenv"]
     args: ["HOSTNAME", "KUBERNETES_PORT"]
