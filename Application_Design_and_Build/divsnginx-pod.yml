@@ -12,8 +12,8 @@ spec:
   - image: nginx:stable-perl
     name: nginx-pod-container
     env:
-    - name: "Hi there how are you?"
-      value: "I'm doing great, thank you!"
-    - name: "Did you have a great time?"
+    - name: "GREETINGS"
+      value: "I'm doing great, thank you"
+    - name: "GREAT_TIME"
       value: "I sure did, thanks for asking"
 
