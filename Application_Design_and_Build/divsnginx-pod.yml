@@ -1,0 +1,19 @@
+
+# divsnginx-pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: divsnginx-pod
+  namespace: default
+  labels:
+    run: nginx-pod
+spec:
+  containers:
+  - image: nginx:stable-perl
+    name: nginx-pod-container
+    env:
+    - name: "Hi there how are you?"
+      value: "I'm doing great, thank you!"
+    - name: "Did you have a great time?"
+      value: "I sure did, thanks for asking"
+
