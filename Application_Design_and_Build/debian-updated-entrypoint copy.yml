@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: debian-entrypoint
+  labels:
+    run: debian-entrypoint
+spec:
+  containers:
+  - image: debian
+    name: debian-entrypoint
+    # commands in yaml file is equivalent to ENTRYPOINT in dockerfile. overriding ENTRYPOINT
+    command: ["sleep", "3600"]
+ 
+
+
+
+  

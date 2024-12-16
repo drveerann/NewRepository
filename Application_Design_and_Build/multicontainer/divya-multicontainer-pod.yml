@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: multicontainer-pod 
+  labels:
+    purpose: executing-demo-for-multicontainer-pod
+spec:
+  containers:
+  - name: multicontainer1-nginx
+    image: nginx
+
+  - name: multicontainer2-busybox
+    image: busybox
+    command: ["sleep", "3600"]
+    
+  
+  restartPolicy: Always

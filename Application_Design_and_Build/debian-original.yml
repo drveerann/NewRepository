@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: debian-original
+  labels:
+    run: debian-original
+spec:
+  containers:
+  - image: debian
+    name: debian-original
+ 
+
+
+
+  

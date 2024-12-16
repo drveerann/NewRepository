@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: debian-entrypoint-cmd
+  labels:
+    run: debian-entrypoint-cmd
+spec:
+  containers:
+  - image: debian
+    name: debian-entrypoint-cmd
+    # command in yaml file is overriding ENTRYPOINT in dockerfile
+    command: ["printenv"]
+    # args in yaml file is overriding CMD in dockerfile
+    args: ["HOSTNAME", "KUBERNETES_PORT"]
+ 
+
+
+
+  
