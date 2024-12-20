@@ -5,7 +5,7 @@ metadata:
 
 spec:
   storageClassName: local-storage
-  persistentVolumeReclaimPolicy: Recycle
+  persistentVolumeReclaimPolicy: Retain
 
   capacity:
     storage: 1Gi

@@ -1,0 +1,17 @@
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: divya-persistentpod
+spec:
+  volumes:
+    - name: my-persistent-volume
+      persistentVolumeClaim:
+        claimName: divya-persistentvolumeclaim
+
+  containers:
+    - name: divya-persistentcontainer
+      image: nginx
+      volumeMounts:
+        - mountPath: "/output"
+          name: my-persistent-volume
