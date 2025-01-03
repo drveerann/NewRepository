@@ -6,15 +6,15 @@ metadata:
     app: redis
 
 spec:
-  replicas: 15
+  replicas: 10 # upgrade from 15 to 10
   selector:
     matchLabels:
       app: redis
   strategy:
     type: RollingUpdate
     rollingUpdate:
-      maxSurge: 2
-      maxUnavailable: 2
+      maxSurge: 1 # upgrade from 2 to 1
+      maxUnavailable: 2 # upgrade to 2 to 0
   minReadySeconds: 10
   template:
     metadata:
@@ -23,4 +23,4 @@ spec:
     spec:
       containers:
         - name: redis-container
-          image: redis:6.0 #Upgrade to 6.0 --> 6.0.16 --> 6.2.6
+          image: redis:7.4.1 #Upgrade from 5.0 to 6.0 --> 6.0.16 --> 6.2.6 --> 7.4.1
