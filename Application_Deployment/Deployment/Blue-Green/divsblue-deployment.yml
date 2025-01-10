@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: appversion-deployment-1.0
+  labels:
+    app: appversion-1.0
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: appversion-1.0
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: appversion-1.0
+    spec:
+      containers:
+      - name: redis
+        image: redis:6.2
+        ports:
+        - containerPort: 80
