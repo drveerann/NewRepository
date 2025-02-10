@@ -1,8 +1,8 @@
-apiVersion: "stable.example.com/v1"
+apiVersion: "stable.example.com/v2"
 kind: CronTab
 metadata:
-  name: my-new-cron-object-dummy1
+  name: my-new-cron-object-dummyv2
 spec:
   cronSpec: "* * * * */5"
   image: my-awesome-cron-image
-  replicas: 20
+  replicas: 9
